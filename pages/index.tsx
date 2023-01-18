@@ -34,18 +34,18 @@ export default function Home() {
           </div>
           <div className="flex mb-[1.25em]">
             <div className="flex-1 mr-16">
-              <p className="mb-[1.25em]">Hey! I'm Mark.</p>
+              <p className="mb-[1.25em]">Hey! I&apos;m Mark.</p>
               <p>
                 Originally from{" "}
                 <Slink href="https://www.startribune.com/walz-statewide-democrats-sworn-into-office-on-monday/600240181/">
                   Minnesota
                 </Slink>
-                , I'm currently at Harvard pursuing two degrees in Math and
+                , I&apos;m currently at Harvard pursuing two degrees in Math and
                 Computer Science set to graduate in 2024. I study the
                 structures, algorithms, and systems that make{" "}
-                <span className="text-xl">BIG</span> data tangible. I'm also
-                interested in compression and the limits of computing, and can
-                crank out ML models if I need to.
+                <span className="text-xl">BIG</span> data tangible. I&apos;m
+                also interested in compression and the limits of computing, and
+                can crank out ML models if I need to.
               </p>
             </div>
             <div>

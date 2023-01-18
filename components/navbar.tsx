@@ -43,9 +43,10 @@ export default function Navbar() {
         );
         const diffHours = Math.floor(diffMins / 60);
         let timeString = "Right now, I'm listening to ";
+        console.log(diffMins, diffHours);
         if (diffMins > 2 && diffHours < 1) {
           timeString = `${diffMins} minutes ago I listened to `;
-        } else {
+        } else if (diffHours >= 1) {
           timeString = `${diffHours} hours ago I listened to `;
         }
         const track = trackRes.items[0].track;
@@ -89,40 +90,7 @@ export default function Navbar() {
           ]}
         />
       </div>
-      <div className="hidden sm:block">
-        <div className="flex mb-4 items-center text-xs">
-          <p className={`${lastSong ? "" : "hidden"}`}>
-            {lastSong?.timeString || ""}
-          </p>
-          <div
-            className={`${
-              lastSong ? "hidden" : ""
-            } mr-2 animate-pulse w-24 h-6 bg-slate-600`}
-          />
-          <SLink
-            className={`${lastSong ? "" : "hidden"} mx-2 `}
-            target="_blank"
-            href={lastSong?.trackUrl || ""}
-          >
-            {lastSong?.title || ""}
-          </SLink>
-          <p>by </p>
-          <div
-            className={`${
-              lastSong ? "hidden" : ""
-            } ml-2 animate-pulse w-24 h-6 bg-slate-600`}
-          />
-          <SLink
-            className={`${lastSong ? "" : "hidden"} ml-2 `}
-            target="_blank"
-            href={lastSong?.artistUrl || ""}
-          >
-            {lastSong?.artist || ""}
-          </SLink>
-          <p>.</p>
-        </div>
-      </div>
-      <div className="sm:hidden">
+      <div className="">
         <div className="flex mb-4 items-center text-xs">
           <p className={`${lastSong ? "" : "hidden"}`}>
             {lastSong?.timeString || ""}
@@ -165,3 +133,39 @@ export default function Navbar() {
     </div>
   );
 }
+
+/* Old spotify text with pulsers
+<div className="hidden sm:block">
+        <div className="flex mb-4 items-center text-xs">
+          <p className={`${lastSong ? "" : "hidden"}`}>
+            {lastSong?.timeString || ""}
+          </p>
+          <div
+            className={`${
+              lastSong ? "hidden" : ""
+            } mr-2 animate-pulse w-24 h-6 bg-slate-600`}
+          />
+          <SLink
+            className={`${lastSong ? "" : "hidden"} mx-2 `}
+            target="_blank"
+            href={lastSong?.trackUrl || ""}
+          >
+            {lastSong?.title || ""}
+          </SLink>
+          <p>by </p>
+          <div
+            className={`${
+              lastSong ? "hidden" : ""
+            } ml-2 animate-pulse w-24 h-6 bg-slate-600`}
+          />
+          <SLink
+            className={`${lastSong ? "" : "hidden"} ml-2 `}
+            target="_blank"
+            href={lastSong?.artistUrl || ""}
+          >
+            {lastSong?.artist || ""}
+          </SLink>
+          <p>.</p>
+        </div>
+      </div>
+*/

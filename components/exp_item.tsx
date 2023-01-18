@@ -50,13 +50,23 @@ export default function ExpItem({
             <p className="text-black m-0 ml-4">{location}</p>
           </div>
         </div>
-        <Slink type="button" className="absolute top-4 right-6 text-black hover:text-lime-900" onClick={() => {
-          openMore();
-        }}>More info ></Slink>
+        <Slink
+          type="button"
+          className="absolute top-4 right-6 text-black hover:text-lime-900"
+          onClick={() => {
+            openMore();
+          }}
+        >
+          More info &gt;
+        </Slink>
         <MoreModal>
           <p className="text-black">{description}</p>
           <ul className="list-disc mt-[0.5em]">
-            {bullets.map((bullet) => <li key={bullet} className="text-black ml-8">{bullet}</li>)}
+            {bullets.map((bullet) => (
+              <li key={bullet} className="text-black ml-8">
+                {bullet}
+              </li>
+            ))}
           </ul>
         </MoreModal>
       </div>
