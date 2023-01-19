@@ -56,7 +56,7 @@ export default function Contact() {
         />
       </Head>
       <div>
-        <div className="flex items-center mb-2">
+        <div className="sm:flex items-center mb-2">
           <p className="mr-2">Quick Links:</p>
           <SocialIcon
             className="scale-[0.75]"

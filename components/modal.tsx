@@ -46,7 +46,7 @@ export default function Modal({ isOpen, setIsOpen, children }: Props) {
                     className="absolute top-2 right-2 cursor-pointer"
                     onClick={closeModal}
                   >
-                    <XMarkIcon className="w-7 h-7 text-black" />
+                    <XMarkIcon className="w-12 h-12 sm:w-7 sm:h-7 text-black" />
                   </div>
                 </Dialog.Panel>
               </Transition.Child>

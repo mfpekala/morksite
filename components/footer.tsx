@@ -2,11 +2,13 @@ import { SocialIcon } from "react-social-icons";
 
 export default function footer() {
   return (
-    <div className="flex justify-between items-center my-8">
-      <p className="text-xs">
-        Copyright Mark Pekala™ 2023, although I have no idea what that means.
-      </p>
-      <div className="flex">
+    <div className="sm:flex sm:justify-between items-center my-8">
+      <div className="">
+        <p className="text-xs">
+          Copyright Mark Pekala™ 2023, although I have no idea what that means.
+        </p>
+      </div>
+      <div className="flex mt-4 sm:mt-0">
         <SocialIcon
           className="scale-[0.75]"
           url="https://github.com/mpekala23?tab=repositories"

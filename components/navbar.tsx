@@ -14,7 +14,9 @@ export default function Navbar() {
     artist: string;
     trackUrl: string;
     artistUrl: string;
-    timeString: string;
+    timeString1: string;
+    timeString2: string;
+    timeString3: string;
   } | null>(null);
 
   useEffect(() => {
@@ -42,12 +44,18 @@ export default function Navbar() {
           (now.getTime() - then.getTime()) / 1000 / 60
         );
         const diffHours = Math.floor(diffMins / 60);
-        let timeString = "Right now, I'm listening to ";
+        let timeString1 = "Right now, ";
+        let timeString2 = "I'm";
+        let timeString3 = " listening to ";
         console.log(diffMins, diffHours);
         if (diffMins > 2 && diffHours < 1) {
-          timeString = `${diffMins} minutes ago I listened to `;
+          timeString1 = `${diffMins} minutes ago `;
+          timeString2 = "I";
+          timeString3 = ` listened to `;
         } else if (diffHours >= 1) {
-          timeString = `${diffHours} hours ago I listened to `;
+          timeString1 = `${diffHours} hours ago `;
+          timeString2 = "I";
+          timeString3 = ` listened to `;
         }
         const track = trackRes.items[0].track;
         setLastSong({
@@ -55,7 +63,9 @@ export default function Navbar() {
           trackUrl: track.external_urls.spotify,
           artist: track.artists[0].name,
           artistUrl: track.artists[0].external_urls.spotify,
-          timeString,
+          timeString1,
+          timeString2,
+          timeString3,
         });
       } catch (e) {
         const fallbackSong = {
@@ -63,9 +73,9 @@ export default function Navbar() {
           artistUrl: "https://open.spotify.com/artist/2U1vwQRYQmG7ypKJF1JTEb",
           title: "fighting back",
           trackUrl: "https://open.spotify.com/track/12WtBygLM06NOYXm3aiQoD",
-          timeString: `${
-            Math.floor(Math.random() * 24) + 1
-          } hours ago I listened to `,
+          timeString1: `${Math.floor(Math.random() * 24) + 1} hours ago `,
+          timeString2: `I`,
+          timeString3: ` listened to `,
         };
         setLastSong(fallbackSong);
       }
@@ -76,9 +86,10 @@ export default function Navbar() {
   return (
     <div className="w-full my-8">
       <div className="flex">
-        <h1 className="flex-1 text-4xl mb-2 cursor-pointer" onClick={goTo("/")}>
+        <h1 className="text-4xl mb-2 cursor-pointer" onClick={goTo("/")}>
           Mark.md
         </h1>
+        <div className="flex-1" />
         <Dropdown
           className="sm:hidden"
           buttons={[
@@ -93,7 +104,15 @@ export default function Navbar() {
       <div className="">
         <div className="flex mb-4 items-center text-xs">
           <p className={`${lastSong ? "" : "hidden"}`}>
-            {lastSong?.timeString || ""}
+            {lastSong?.timeString1 || ""}
+            <SLink
+              className={`${lastSong ? "" : "hidden"}`}
+              target="_blank"
+              href="https://open.spotify.com/user/mpek66?si=8e586285aca84768"
+            >
+              {lastSong?.timeString2 || ""}
+            </SLink>
+            {lastSong?.timeString3 || ""}
             <SLink
               className={`${lastSong ? "" : "hidden"}`}
               target="_blank"
@@ -133,39 +152,3 @@ export default function Navbar() {
     </div>
   );
 }
-
-/* Old spotify text with pulsers
-<div className="hidden sm:block">
-        <div className="flex mb-4 items-center text-xs">
-          <p className={`${lastSong ? "" : "hidden"}`}>
-            {lastSong?.timeString || ""}
-          </p>
-          <div
-            className={`${
-              lastSong ? "hidden" : ""
-            } mr-2 animate-pulse w-24 h-6 bg-slate-600`}
-          />
-          <SLink
-            className={`${lastSong ? "" : "hidden"} mx-2 `}
-            target="_blank"
-            href={lastSong?.trackUrl || ""}
-          >
-            {lastSong?.title || ""}
-          </SLink>
-          <p>by </p>
-          <div
-            className={`${
-              lastSong ? "hidden" : ""
-            } ml-2 animate-pulse w-24 h-6 bg-slate-600`}
-          />
-          <SLink
-            className={`${lastSong ? "" : "hidden"} ml-2 `}
-            target="_blank"
-            href={lastSong?.artistUrl || ""}
-          >
-            {lastSong?.artist || ""}
-          </SLink>
-          <p>.</p>
-        </div>
-      </div>
-*/

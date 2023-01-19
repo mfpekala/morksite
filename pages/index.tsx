@@ -25,7 +25,7 @@ export default function Home() {
         <div>
           <div>
             <Image
-              className="sm:hidden mx-auto mb-[1.25em]"
+              className="sm:hidden mx-auto mb-8"
               width={200}
               height={200}
               src={PixelHeadshot}
@@ -65,7 +65,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="flex mb-[1.25em] border-dashed border-2 border-white h-36">
+          <div className="flex mb-[1.25em]">
             <p>
               In my free time I write comedy, run, and make{" "}
               <Slink href="">games</Slink>.

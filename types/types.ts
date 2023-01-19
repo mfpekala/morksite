@@ -11,3 +11,10 @@ export interface Experience {
   description: string;
   bullets: string[];
 }
+
+export interface Project {
+  title: string;
+  description: string;
+  liveLink?: string;
+  codeLink: string;
+}

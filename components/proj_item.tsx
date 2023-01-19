@@ -4,7 +4,7 @@ import useGoTo from "../hooks/useGoTo";
 import { Experience } from "../types/types";
 import useModal from "../hooks/useModal";
 
-export default function ExpItem({
+export default function Proj({
   year,
   first,
   last,
