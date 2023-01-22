@@ -23,8 +23,6 @@ export default function Navbar() {
     const doSpotify = async () => {
       try {
         const refreshToken = process.env.NEXT_PUBLIC_SPOTIFY_REFRESH;
-        console.log("got to refresh token");
-        console.log(refreshToken);
         const res = await fetch("https://accounts.spotify.com/api/token", {
           method: "POST",
           body: `refresh_token=${refreshToken}&grant_type=refresh_token&client_id=${process.env.NEXT_PUBLIC_SPOTIFY_ID}&client_secret=${process.env.NEXT_PUBLIC_SPOTIFY_SECRET}`,
@@ -32,11 +30,7 @@ export default function Navbar() {
             "Content-Type": "application/x-www-form-urlencoded",
           },
         });
-        console.log("res");
-        console.log(res);
         const clean = await res.json();
-        console.log("clean");
-        console.log(clean);
 
         spotifyRef.current = new SpotifyWebApi({
           accessToken: clean.access_token,
@@ -74,7 +68,6 @@ export default function Navbar() {
           timeString3,
         });
       } catch (e) {
-        console.log("falling back because", e);
         const fallbackSong = {
           artist: "R.A.P. Ferreira",
           artistUrl: "https://open.spotify.com/artist/2U1vwQRYQmG7ypKJF1JTEb",
