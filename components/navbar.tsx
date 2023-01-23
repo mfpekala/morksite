@@ -48,7 +48,7 @@ export default function Navbar() {
         let timeString1 = "Right now, ";
         let timeString2 = "I'm";
         let timeString3 = " listening to ";
-        if (diffMins > 2 && diffHours < 1) {
+        if (diffMins > 10 && diffHours < 1) {
           timeString1 = `${diffMins} minutes ago `;
           timeString2 = "I";
           timeString3 = ` listened to `;
