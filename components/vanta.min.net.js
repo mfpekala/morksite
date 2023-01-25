@@ -428,7 +428,7 @@
           a.computeBoundingSphere(),
           a.setDrawRange(0, 0);
         const l = new p.LineBasicMaterial({
-          vertexColors: p.VertexColors,
+          vertexColors: true,
           blending: "additive" === this.blending ? p.AdditiveBlending : null,
           transparent: !0,
         });

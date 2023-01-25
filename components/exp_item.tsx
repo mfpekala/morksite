@@ -26,18 +26,22 @@ export default function ExpItem({
         <p className="mr-4">{year}</p>
         <div className="flex flex-col self-stretch">
           <div
-            className={`w-0.5 flex-1 mx-auto ${!first ? "bg-slate-100" : ""}`}
+            className={`w-0.5 flex-1 mx-auto ${
+              !first ? "bg-[rgba(255,255,255,0.86)]" : ""
+            }`}
           />
-          <div className="w-8 h-8 border-2 border-white bg-slate-600" />
+          <div className="w-8 h-8 border-2 border-[rgba(255,255,255,0.86)] bg-[rgba(120,120,120,0.86)]" />
           <div
-            className={`w-0.5 flex-1 mx-auto ${!last ? "bg-slate-100" : ""}`}
+            className={`w-0.5 flex-1 mx-auto ${
+              !last ? "bg-[rgba(255,255,255,0.86)]" : ""
+            }`}
           />
         </div>
-        <div className="w-12 h-0.5 bg-white"></div>
+        <div className="w-12 h-0.5 bg-[rgba(255,255,255,0.86)]"></div>
       </div>
       <div
         onClick={openMore}
-        className="pointer-events-auto sm:pointer-events-none relative w-full p-4 mb-8 sm:my-4 border-2 border-white bg-slate-100 shadow-xl"
+        className="pointer-events-auto sm:pointer-events-none relative w-full p-4 mb-8 sm:my-4 bg-[rgba(255,255,255,0.86)] shadow-xl"
       >
         <div className="flex flex-col justify-center items-center">
           <Image

@@ -16,7 +16,7 @@ export default function ProjItem({
   const goTo = useGoTo();
 
   return (
-    <div className="w-full p-8 border border-white">
+    <div className="w-full p-8 border bg-[rgba(0,0,0,0.3)] border-white">
       <div className="flex justify-center items-center">
         <div className="mr-8">
           <p className="text-xl font-bold">{title}</p>

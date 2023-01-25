@@ -100,14 +100,14 @@ export default function Contact() {
             onChange={(e) => {
               setSubject(e.target.value);
             }}
-            className="bg-slate-700 p-1 w-full mb-4"
+            className="bg-[rgba(30,50,53,0.92)] p-1 w-full mb-4"
           />
           <p className="text-md mb-1">Body:</p>
           <textarea
             name="body"
             value={body}
             onChange={(e) => setBody(e.target.value)}
-            className="bg-slate-700 p-1 h-48 w-full mb-4"
+            className="bg-[rgba(30,50,53,0.92)] p-1 h-48 w-full mb-4"
             style={{ resize: "none" }}
           />
           <div className="flex">
