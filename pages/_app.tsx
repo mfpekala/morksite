@@ -50,10 +50,14 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <div id="test">
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+    <div>
+      <div className="relative overscroll-contain z-20">
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </div>
+      <div className="bg-[rgba(0,0,0,0.76)] fixed top-0 left-0 z-10 w-screen h-screen" />
+      <div id="test" className="fixed top-0 left-0 z-0 w-screen h-screen" />
     </div>
   );
 }
