@@ -8,7 +8,16 @@ export const PROJECTS: Project[] = [
     anyone to look under the hood of the world's most popular image compression 
     scheme.`,
     image: "PlayJPEG.png",
-    timeframe: "December 2022 - Febuary 2023",
+    timeframe: "December 2022 - January 2023",
     codeLink: "https://github.com/mpekala23/play-jpeg",
+  },
+  {
+    title: "Towards Fast Fractal Image Compression",
+    description: `As part of an advanced algorithms class at Harvard 
+    I spent part of a semester attempting to improve the feasibility of 
+    fractal image compression. Some successes, some failures.`,
+    image: "FastFractal.png",
+    timeframe: "September 2022 - December 2022",
+    codeLink: "https://github.com/mpekala23/FastFractal",
   },
 ];
