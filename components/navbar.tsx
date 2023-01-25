@@ -96,7 +96,7 @@ export default function Navbar() {
             { text: "About / Home", onClick: goTo("/") },
             // { text: "Blog", onClick: goTo("blog") },
             { text: "Experience", onClick: goTo("experience") },
-            // { text: "Projects", onClick: goTo("projects") },
+            { text: "Projects", onClick: goTo("projects") },
             { text: "Contact", onClick: goTo("contact") },
           ]}
         />
@@ -148,11 +148,9 @@ export default function Navbar() {
         <SLink className="text-lg mr-8" href="experience">
           Experience
         </SLink>
-        {false && (
-          <SLink className="text-lg mr-8" href="projects">
-            Projects
-          </SLink>
-        )}
+        <SLink className="text-lg mr-8" href="projects">
+          Projects
+        </SLink>
         <SLink className="text-lg mr-8" href="contact">
           Contact
         </SLink>

@@ -1,83 +1,47 @@
 import Image from "next/image";
 import Slink from "./slink";
 import useGoTo from "../hooks/useGoTo";
-import { Experience } from "../types/types";
+import { Project } from "../types/types";
 import useModal from "../hooks/useModal";
+import RectButton from "./rect_button";
 
-export default function Proj({
-  year,
-  first,
-  last,
-  org,
-  logo,
-  website,
+export default function ProjItem({
   title,
-  timeframe,
-  location,
   description,
-  bullets,
-}: Experience) {
+  image,
+  timeframe,
+  liveLink,
+  codeLink,
+}: Project) {
   const goTo = useGoTo();
-  const [MoreModal, openMore] = useModal();
 
   return (
-    <div className="flex items-center">
-      <div className="hidden sm:flex self-stretch items-center">
-        <p className="mr-4">{year}</p>
-        <div className="flex flex-col self-stretch">
-          <div
-            className={`w-0.5 flex-1 mx-auto ${!first ? "bg-slate-100" : ""}`}
-          />
-          <div className="w-8 h-8 border-2 border-white bg-slate-600" />
-          <div
-            className={`w-0.5 flex-1 mx-auto ${!last ? "bg-slate-100" : ""}`}
-          />
-        </div>
-        <div className="w-12 h-0.5 bg-white"></div>
-      </div>
-      <div
-        onClick={openMore}
-        className="pointer-events-auto sm:pointer-events-none relative w-full p-4 mb-8 sm:my-4 border-2 border-white bg-slate-100 shadow-xl"
-      >
-        <div className="flex flex-col justify-center items-center">
-          <Image
-            className="mb-[1.25em] cursor-pointer pointer-events-auto hover:scale-[1.02] transition-all"
-            onClick={goTo(website, { newTab: true })}
-            src={`/exp_logos/${logo}`}
-            alt={org}
-            width={200}
-            height={100}
-          />
-          <p className="text-black mb-2 text-lg font-bold text-center">
-            {title}
-          </p>
-          <div className="block sm:flex w-full justify-center items-center">
-            <p className="text-black m-0 sm:mr-4 text-center">{timeframe}</p>
-            <p className="text-black m-0 sm:ml-4 text-center">{location}</p>
+    <div className="w-full p-8 border border-white">
+      <div className="flex justify-center items-center">
+        <div className="mr-8">
+          <p className="text-xl font-bold">{title}</p>
+          <p className="italic">{timeframe}</p>
+          <p className="mb-[1.25em]">{description}</p>
+          <div className="flex">
+            <RectButton
+              className="mr-8"
+              onClick={goTo(codeLink, { newTab: true })}
+            >
+              View Code
+            </RectButton>
+            {liveLink && liveLink.length > 0 && (
+              <RectButton onClick={goTo(liveLink, { newTab: true })}>
+                Try it Out!
+              </RectButton>
+            )}
           </div>
         </div>
-        <Slink
-          type="button"
-          className="pointer-events-auto hidden sm:block absolute top-4 right-6 text-black hover:text-lime-900"
-          onClick={openMore}
-        >
-          More info &gt;
-        </Slink>
-        <div className="flex justify-center sm:hidden">
-          <p className="text-xs mt-4 text-black hover:text-lime-900">
-            (Tap for more info)
-          </p>
-        </div>
-        <MoreModal>
-          <p className="text-black">{description}</p>
-          <ul className="list-disc mt-[0.5em]">
-            {bullets.map((bullet) => (
-              <li key={bullet} className="text-black ml-8">
-                {bullet}
-              </li>
-            ))}
-          </ul>
-        </MoreModal>
+        <Image
+          src={`/proj_imgs/${image}`}
+          alt={title}
+          width={200}
+          height={200}
+        />
       </div>
     </div>
   );
