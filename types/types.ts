@@ -19,4 +19,5 @@ export interface Project {
   timeframe: string;
   liveLink?: string;
   codeLink: string;
+  protectString?: string;
 }

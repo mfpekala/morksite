@@ -12,8 +12,10 @@ export default function ProjItem({
   timeframe,
   liveLink,
   codeLink,
+  protectString,
 }: Project) {
   const goTo = useGoTo();
+  const [ProtectModal, openProtect] = useModal();
 
   return (
     <div className="w-full mb-8 p-8 border bg-[rgba(0,0,0,0.3)] border-white">
@@ -32,7 +34,13 @@ export default function ProjItem({
           <div className="flex">
             <RectButton
               className="mr-8"
-              onClick={goTo(codeLink, { newTab: true })}
+              onClick={() => {
+                if (!protectString) {
+                  goTo(codeLink, { newTab: true })();
+                } else {
+                  openProtect();
+                }
+              }}
             >
               View Code
             </RectButton>
@@ -50,6 +58,9 @@ export default function ProjItem({
           width={200}
           height={200}
         />
+        <ProtectModal>
+          <p className="text-black">{protectString}</p>
+        </ProtectModal>
       </div>
     </div>
   );
