@@ -1,0 +1,15 @@
+datasource db {
+  url      = "postgresql://postgres:insecure@localhost:5432/personal"
+  provider = "postgresql"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Post {
+  id Int @id @default(autoincrement())
+  title String @default("")
+  meta String @default("")
+  markdown String @db.VarChar(100000)
+}

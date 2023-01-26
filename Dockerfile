@@ -1,0 +1,3 @@
+FROM postgres
+ENV POSTGRES_PASSWORD insecure
+ENV POSTGRES_DB personal
