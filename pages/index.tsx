@@ -16,7 +16,6 @@ export default function Home() {
           content="Hey! I'm Mark, a software engineer with a passion for databases, compression, and full-stack development. I spend my free time writing comedy and making games."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
         <div>
