@@ -1,5 +1,4 @@
 import { Project } from "../types/types";
-
 export const PROJECTS: Project[] = [
   {
     title: "play.JPEG",
