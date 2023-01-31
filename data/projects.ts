@@ -10,7 +10,7 @@ export const PROJECTS: Project[] = [
     image: "PlayJPEG.png",
     timeframe: "December 2022 - January 2023",
     codeLink: "https://github.com/mpekala23/play-jpeg",
-    liveLink: "https://play-jpeg.vercel.app/",
+    liveLink: "https://play-jpeg.com",
   },
   {
     title: "Lampoon Digital Subscriptions",
