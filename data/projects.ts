@@ -1,6 +1,25 @@
 import { Project } from "../types/types";
 export const PROJECTS: Project[] = [
   {
+    title: "Climate Innovathon",
+    description: `Organized an event at the intersection of computer science and chemistry at Harvard
+    encouraging students to explore research topics in carbon capture. Sponsored by Frontier Climate, over $500 in prizes.`,
+    image: "ClimateInnovathon.jpeg",
+    timeframe: "February 2022 - Present",
+    codeLink: "https://github.com/mpekala23/climate-innovathon-site",
+    liveLink: "https://www.climate-innovathon.com/",
+  },
+  {
+    title: "README #",
+    description: `The culmination of my time on the Lampoon, I edited an issue of the magazine
+    focused on why computers make whirring sounds sometimes.`,
+    image: "README-cover.jpeg",
+    timeframe: "December 2022 - March 2023",
+    codeLink: "https://harvardlampoon.com/read/magazines/33/",
+    liveLink: "https://harvardlampoon.com/read/magazines/33/",
+    protectString: "Magazines are protected by copyright, idiot.",
+  },
+  {
     title: "play.JPEG",
     description: `Inspired by my research into fractal compression, I took a 
     deep dive into the JPEG encoding scheme and created a friendly tool for 
