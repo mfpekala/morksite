@@ -1,11 +1,20 @@
 import { Project } from "../types/types";
 export const PROJECTS: Project[] = [
   {
+    title: "Verifying the Byzantine Generals Problem",
+    description: `Using the Lean theorem prover, I composed a formal proof of the byzantine generals problem.`,
+    image: "ByzGenerals.png",
+    timeframe: "February 2023 - April 2023",
+    codeLink: "https://github.com/mpekala23/FormalByzantine",
+    liveLink:
+      "https://github.com/mpekala23/FormalByzantine/blob/main/Paper.pdf",
+  },
+  {
     title: "Climate Innovathon",
     description: `Organized an event at the intersection of computer science and chemistry at Harvard
     encouraging students to explore research topics in carbon capture. Sponsored by Frontier Climate, over $500 in prizes.`,
     image: "ClimateInnovathon.jpeg",
-    timeframe: "February 2022 - Present",
+    timeframe: "February 2023 - March 2023",
     codeLink: "https://github.com/mpekala23/climate-innovathon-site",
     liveLink: "https://www.climate-innovathon.com/",
   },
