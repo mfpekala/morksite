@@ -4,11 +4,23 @@ export const Experiences: Experience[] = [
   {
     year: "2023",
     first: true,
+    org: "Nutanix",
+    logo: "Nutanix.png",
+    website: "https://www.nutanix.com/products/database-service",
+    title: "Database Engineer Intern",
+    timeframe: "May 2023 - August 2023",
+    location: "San Jose, CA",
+    description: `Nutanix is a leading cloud computing provider in the U.S. I began working with them in a small
+    team as they began integrating database-as-a-service into their suite of products. Here's what's on my resume:`,
+    bullets: ["We'll see what fun things I can get up to..."],
+  },
+  {
+    year: "2023",
     org: "Fair Opportunity Project",
     logo: "FairOpp.png",
     website: "https://www.fairopportunityproject.org/",
     title: "Full-Stack Software Engineer",
-    timeframe: "January 2023 - Present",
+    timeframe: "January 2023 - April 2023",
     location: "Madison, WI (Remote)",
     description: `The Fair Opportunity project is a small non-profit 
     committed to making college accessible to all. As one of the first 

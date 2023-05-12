@@ -1,6 +1,29 @@
 import { Project } from "../types/types";
 export const PROJECTS: Project[] = [
   {
+    title: "Out-of-Place Writes on the PGM Index",
+    description: `Preliminary research into efficiently extending the functionality of the PGM
+    index. Traditionally, the PGM uses ML techniques to achieve fast reads with little memory usage.
+    This research implements a novel technique to allow for fast writes as well, with minimal additional
+    memory overhead.`,
+    image: "PGMOutOfPlace.png",
+    timeframe: "February 2023 - May 2023",
+    codeLink:
+      "https://github.com/mpekala23/PGMOutOfPlaceWrites/tree/main/Playground",
+    liveLink:
+      "https://drive.google.com/file/d/1og05YP8s4XiHgzkm0BBPdm1e06ZcrnlM/view?usp=sharing",
+  },
+  {
+    title: "NumCross",
+    description: `Along with a few friends at Harvard, spun up a NYT-mini inspired app
+    for sharing a unique type of number puzzle. I was in charge of spinning up the database and coordinating
+    deployment with terraform so that when this thing blows up, we'll be ready for a million users..`,
+    image: "NumCross.png",
+    timeframe: "February 2023 - May 2023",
+    codeLink: "https://github.com/fingoldin/numcross",
+    liveLink: "https://numcross.com",
+  },
+  {
     title: "Verifying the Byzantine Generals Problem",
     description: `Using the Lean theorem prover, I composed a formal proof of the byzantine generals problem.`,
     image: "ByzGenerals.png",
@@ -8,6 +31,26 @@ export const PROJECTS: Project[] = [
     codeLink: "https://github.com/mpekala23/FormalByzantine",
     liveLink:
       "https://github.com/mpekala23/FormalByzantine/blob/main/Paper.pdf",
+  },
+  {
+    title: "Nerf Goliath",
+    description: `Nerf Goliath is a novel multiplayer networking protocol which seemlessly
+    switches hosting to give ping benefit to players in losing positions.`,
+    image: "NerfGoliath.png",
+    timeframe: "March 2023 - May 2023",
+    codeLink: "https://github.com/mpekala23/NerfGoliath",
+    liveLink:
+      "https://github.com/mpekala23/NerfGoliath/blob/main/results/final_paper.pdf",
+  },
+  {
+    title: "Pokegan",
+    description: `As a fun dive into the world of GANs, I tried to generate novel pokemon
+    using GANs. The results were... interesting.`,
+    image: "pokegan.gif",
+    timeframe: "March 2023 - May 2023",
+    codeLink: "https://github.com/mpekala23/NerfGoliath",
+    protectString:
+      "Unfortunately, I submitted large chunks of this project as part of class work, so I can't share the code publicly.",
   },
   {
     title: "Climate Innovathon",
