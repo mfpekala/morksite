@@ -173,7 +173,7 @@ export default function WelcomeGame() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
     ctx.fillStyle = "white";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    // ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.imageSmoothingEnabled = false;
 
     const shapes = [];
@@ -206,7 +206,7 @@ export default function WelcomeGame() {
   }, [doUpdate, drawFrame]);
 
   useEffect(() => {
-    const interval = setInterval(gameLoop, 1000 / 60);
+    const interval = setInterval(gameLoop, 1000 / 30);
     return () => clearInterval(interval);
   }, [gameLoop]);
 
