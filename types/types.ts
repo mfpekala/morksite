@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface Experience {
   year?: string;
   first?: boolean;
@@ -20,4 +22,13 @@ export interface Project {
   liveLink?: string;
   codeLink: string;
   protectString?: string;
+}
+
+export interface BlogPost {
+  slug: string;
+  title: string;
+  abstract: string;
+  cartoon: string;
+  date: string;
+  content: ReactNode | ReactNode[];
 }

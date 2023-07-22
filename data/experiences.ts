@@ -4,15 +4,32 @@ export const Experiences: Experience[] = [
   {
     year: "2023",
     first: true,
+    org: "Kino AI",
+    logo: "Kino.png",
+    website: "https://trykino.com",
+    title: "Software Engineering Intern",
+    timeframe: "May 2023 - Present",
+    location: "San Francisco, CA",
+    description: `Kino aims to empower filmmakers with the ability to semantically search their footage.
+    I'm helping build out OCR functionality. Here's what's on my resume:`,
+    bullets: ["We'll see what other fun things I can get up to..."],
+  },
+  {
+    year: "2023",
     org: "Nutanix",
     logo: "Nutanix.png",
     website: "https://www.nutanix.com/products/database-service",
-    title: "Database Engineer Intern",
+    title: "R&D Database Engineering Intern",
     timeframe: "May 2023 - August 2023",
     location: "San Jose, CA",
     description: `Nutanix is a leading cloud computing provider in the U.S. I began working with them in a small
     team as they began integrating database-as-a-service into their suite of products. Here's what's on my resume:`,
-    bullets: ["We'll see what fun things I can get up to..."],
+    bullets: [
+      "Made substantial open source contributions to Patroni (Postgres high availability)",
+      "Deployed an integrated automated testing suite for high-availability databases to improve failover downtime.",
+      "Wrote an educational blog on failover internals to empower customers and developers to make better decisions.",
+      "Developed a first-of-its-kind cloud agnostic database migration tool for Nutanix.",
+    ],
   },
   {
     year: "2023",
