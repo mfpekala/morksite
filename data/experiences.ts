@@ -2,19 +2,7 @@ import { Experience } from "../types/types";
 
 export const Experiences: Experience[] = [
   {
-    year: "2023",
     first: true,
-    org: "Kino AI",
-    logo: "Kino.png",
-    website: "https://trykino.com",
-    title: "Software Engineering Intern",
-    timeframe: "May 2023 - Present",
-    location: "San Francisco, CA",
-    description: `Kino aims to empower filmmakers with the ability to semantically search their footage.
-    I'm helping build out OCR functionality. Here's what's on my resume:`,
-    bullets: ["We'll see what other fun things I can get up to..."],
-  },
-  {
     year: "2023",
     org: "Nutanix",
     logo: "Nutanix.png",
@@ -29,6 +17,23 @@ export const Experiences: Experience[] = [
       "Deployed an integrated automated testing suite for high-availability databases to improve failover downtime.",
       "Wrote an educational blog on failover internals to empower customers and developers to make better decisions.",
       "Developed a first-of-its-kind cloud agnostic database migration tool for Nutanix.",
+      "Planned and built out a proof-of-concept for a logging system redesign to help scale from 200 DBs to 20,000 DBs.",
+    ],
+  },
+  {
+    year: "2023",
+    org: "Kino AI",
+    logo: "Kino.png",
+    website: "https://trykino.com",
+    title: "Software Engineering Intern",
+    timeframe: "May 2023 - Present",
+    location: "San Francisco, CA",
+    description: `Kino aims to empower filmmakers with the ability to semantically search their footage.
+    I'm helping (part-time) build out OCR functionality. Here's what's on my resume:`,
+    bullets: [
+      "Benchmarked various open-source OCR engines to determine the best fit for our use case.",
+      "Developed a pipeline to extract text from user videos and index them for lightning-fast rust-powered search.",
+      "Built out a simple frontend using Nextjs embedded in our Tauri app.",
     ],
   },
   {
