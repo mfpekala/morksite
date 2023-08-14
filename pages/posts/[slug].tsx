@@ -12,7 +12,6 @@ interface StaticParams {
 
 export async function getStaticProps({ params }: StaticParams) {
   const post = await getBlogPostBySlug(params.slug);
-  console.log(post);
   return {
     props: {
       post,

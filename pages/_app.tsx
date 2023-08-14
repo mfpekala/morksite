@@ -21,8 +21,8 @@ export default function App({ Component, pageProps }: AppProps) {
       minWidth: 200.0,
       scale: 1.0,
       scaleMobile: 1.0,
-      color: 0x88ff88,
-      backgroundColor: 0x50531,
+      color: 0xeeeeee,
+      backgroundColor: 0x000000,
       points: 20.0,
       maxDistance: 26.0,
       spacing: 16.0,
@@ -46,7 +46,7 @@ export default function App({ Component, pageProps }: AppProps) {
         </Layout>
       </div>
       <div
-        className={`bg-[rgba(0,0,0,0.76)] fixed top-0 left-0 z-10 w-screen h-screen ${
+        className={`bg-[rgba(0.1,0.1,0.1,0.3)] fixed top-0 left-0 z-10 w-screen h-screen ${
           isBlogPost ? "hidden" : ""
         }`}
       />

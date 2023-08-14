@@ -1,6 +1,17 @@
 import { Project } from "../types/types";
 export const PROJECTS: Project[] = [
   {
+    title: "Cyclicism",
+    description: `As a kid, I loved reading the news. Nowadays, I find it rare to find an article
+    that I don't feel like I've read some version of before. Cyclicism is a tool that uses transformer
+    embeddings to compare trending NYT articles to stories published 20 years ago to highlight patterns
+    in the news cycle.`,
+    image: "Cyclicism.png",
+    timeframe: "July 2023 - August 2023",
+    codeLink: "https://github.com/mpekala23/cyclicism",
+    liveLink: "https://cyclicism.mark-pekala.dev/",
+  },
+  {
     title: "Out-of-Place Writes on the PGM Index",
     description: `Preliminary research into efficiently extending the functionality of the PGM
     index. Traditionally, the PGM uses ML techniques to achieve fast reads with little memory usage.
@@ -36,7 +47,7 @@ export const PROJECTS: Project[] = [
     title: "Nerf Goliath",
     description: `Nerf Goliath is a novel multiplayer networking protocol which seemlessly
     switches hosting to give ping benefit to players in losing positions.`,
-    image: "NerfGoliath.png",
+    image: "NerfGoliath.gif",
     timeframe: "March 2023 - May 2023",
     codeLink: "https://github.com/mpekala23/NerfGoliath",
     liveLink:
@@ -56,7 +67,7 @@ export const PROJECTS: Project[] = [
     title: "Climate Innovathon",
     description: `Organized an event at the intersection of computer science and chemistry at Harvard
     encouraging students to explore research topics in carbon capture. Sponsored by Frontier Climate, over $500 in prizes.`,
-    image: "ClimateInnovathon.jpeg",
+    image: "ClimateInnovathon.png",
     timeframe: "February 2023 - March 2023",
     codeLink: "https://github.com/mpekala23/climate-innovathon-site",
     liveLink: "https://www.climate-innovathon.com/",
