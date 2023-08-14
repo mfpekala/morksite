@@ -30,5 +30,5 @@ export interface BlogPost {
   abstract: string;
   cartoon: string;
   date: string;
-  content: ReactNode | ReactNode[];
+  content: string;
 }

@@ -4,9 +4,12 @@ import Layout from "../components/layout";
 import { createRef, useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import NET from "../components/vanta.min.net";
+import { usePathname } from "next/navigation";
 
 export default function App({ Component, pageProps }: AppProps) {
   const vantaRef = createRef<HTMLDivElement>();
+  const pathname = usePathname();
+  const [isBlogPost, setIsBlogPost] = useState(true);
 
   useEffect(() => {
     const vantaEff = (NET as any)({
@@ -30,18 +33,29 @@ export default function App({ Component, pageProps }: AppProps) {
     };
   }, []);
 
+  useEffect(() => {
+    // For tweaking the page framing on the blog side of site
+    setIsBlogPost(!!pathname?.startsWith("/posts"));
+  }, [pathname]);
+
   return (
     <div>
       <div className="relative overscroll-contain z-20">
-        <Layout>
+        <Layout isBlogPost={isBlogPost}>
           <Component {...pageProps} />
         </Layout>
       </div>
-      <div className="bg-[rgba(0,0,0,0.76)] fixed top-0 left-0 z-10 w-screen h-screen" />
+      <div
+        className={`bg-[rgba(0,0,0,0.76)] fixed top-0 left-0 z-10 w-screen h-screen ${
+          isBlogPost ? "hidden" : ""
+        }`}
+      />
       <div
         ref={vantaRef}
         id="test"
-        className="fixed top-0 left-0 z-0 w-screen h-screen"
+        className={`fixed top-0 left-0 z-0 w-screen h-screen ${
+          isBlogPost ? "opacity-0" : ""
+        }`}
       />
     </div>
   );

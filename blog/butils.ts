@@ -1,5 +1,9 @@
 import { Database } from "sqlite3";
 import { BlogPost } from "../types/types";
+import fs from "fs";
+import showdown from "showdown";
+
+const converter = new showdown.Converter();
 
 export async function getBlogPostBySlug(
   slug: string
@@ -14,6 +18,17 @@ export async function getBlogPostBySlug(
       }
     });
   });
+  // Load the file at blog/posts/${slug}.md
+  const content = await new Promise<string>((resolve, reject) => {
+    fs.readFile(`blog/posts/${slug}.md`, "utf8", (err, data) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    });
+  });
+  const html = converter.makeHtml(content);
   const clean = (row: any): BlogPost | null => {
     if (!row) {
       return null;
@@ -24,10 +39,10 @@ export async function getBlogPostBySlug(
       abstract: row.abstract,
       cartoon: row.cartoon,
       date: row.date,
-      content: JSON.parse(row.content),
+      content: html,
     };
   };
-  return row;
+  return clean(row);
 }
 
 export async function getAllSlugs(): Promise<{ slug: string }[]> {
