@@ -5,6 +5,7 @@ import { createRef, useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import NET from "../components/vanta.min.net";
 import { usePathname } from "next/navigation";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const vantaRef = createRef<HTMLDivElement>();
@@ -57,6 +58,7 @@ export default function App({ Component, pageProps }: AppProps) {
           isBlogPost ? "opacity-0" : ""
         }`}
       />
+      <Analytics />
     </div>
   );
 }
