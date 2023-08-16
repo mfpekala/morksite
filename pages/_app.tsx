@@ -6,11 +6,13 @@ import * as THREE from "three";
 import NET from "../components/vanta.min.net";
 import { usePathname } from "next/navigation";
 import { Analytics } from "@vercel/analytics/react";
+import Typewriter from "typewriter-effect";
 
 export default function App({ Component, pageProps }: AppProps) {
   const vantaRef = createRef<HTMLDivElement>();
   const pathname = usePathname();
-  const [isBlogPost, setIsBlogPost] = useState(true);
+  const [isBlogPost, setIsBlogPost] = useState(false);
+  const [typewriterOpacity, setTypewriterOpacity] = useState(100);
 
   useEffect(() => {
     const vantaEff = (NET as any)({
@@ -29,6 +31,9 @@ export default function App({ Component, pageProps }: AppProps) {
       spacing: 16.0,
       THREE: THREE,
     });
+    setTimeout(() => {
+      setTypewriterOpacity(0);
+    }, 1800);
     return () => {
       vantaEff.destroy();
     };
@@ -41,6 +46,28 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <div>
+      {!isBlogPost && (
+        <div
+          className={`transition-opacity ease-in duration-700 opacity-${typewriterOpacity} pointer-events-none fixed top-0 w-full h-full bg-slate-50 z-30 flex justify-center items-center`}
+        >
+          <div
+            className={`transition ease-in duration-1000 scale-${typewriterOpacity}`}
+          >
+            <Typewriter
+              options={{
+                strings: ["Mark Faist Pekala"],
+                autoStart: true,
+                loop: false,
+                delay: 50,
+                cursorClassName:
+                  "text-5xl font-bold animate-ping text-gray-900",
+                wrapperClassName:
+                  "text-center text-5xl text-gray-900 font-pixel",
+              }}
+            />
+          </div>
+        </div>
+      )}
       <div className="relative overscroll-contain z-20">
         <Layout isBlogPost={isBlogPost}>
           <Component {...pageProps} />

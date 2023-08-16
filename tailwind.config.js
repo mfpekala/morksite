@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: [defaultTheme.fontFamily.mono],
+        pixel: ["VT323"],
       },
     },
   },

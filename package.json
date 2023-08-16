@@ -31,6 +31,7 @@
     "sqlite3": "^5.1.6",
     "three": "^0.148.0",
     "typescript": "4.9.4",
+    "typewriter-effect": "^2.20.1",
     "vanta": "^0.5.24"
   },
   "devDependencies": {

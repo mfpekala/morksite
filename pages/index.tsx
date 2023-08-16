@@ -4,8 +4,6 @@ import Image from "next/image";
 import PixelHeadshot from "../public/MePixels.png";
 import Slink from "../components/slink";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function Home() {
   return (
     <>
@@ -18,9 +16,6 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main>
-        <div>
-          <p></p>
-        </div>
         <div>
           <div>
             <Image
