@@ -61,8 +61,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 delay: 50,
                 cursorClassName:
                   "text-5xl font-bold animate-ping text-gray-900",
-                wrapperClassName:
-                  "text-center text-5xl text-gray-900 font-pixel",
+                wrapperClassName: "text-center text-5xl text-gray-900",
               }}
             />
           </div>

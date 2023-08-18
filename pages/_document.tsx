@@ -5,6 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon image_src" href="MarkIcon.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=VT323&display=optional"
           rel="stylesheet"
