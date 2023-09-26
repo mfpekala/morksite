@@ -19,8 +19,7 @@ export const PROJECTS: Project[] = [
     memory overhead.`,
     image: "PGMOutOfPlace.png",
     timeframe: "February 2023 - May 2023",
-    codeLink:
-      "https://github.com/mpekala23/PGMOutOfPlaceWrites/tree/main/Playground",
+    codeLink: "https://github.com/mpekala23/Limousine-COOP-Writes/tree/main",
     liveLink:
       "https://drive.google.com/file/d/1og05YP8s4XiHgzkm0BBPdm1e06ZcrnlM/view?usp=sharing",
   },
@@ -31,7 +30,7 @@ export const PROJECTS: Project[] = [
     deployment with terraform so that when this thing blows up, we'll be ready for a million users..`,
     image: "NumCross.png",
     timeframe: "February 2023 - May 2023",
-    codeLink: "https://github.com/fingoldin/numcross",
+    codeLink: "https://github.com/mpekala23/numcross",
     liveLink: "https://numcross.com",
   },
   {
