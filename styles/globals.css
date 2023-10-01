@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .clickable-up {
+    @apply hover:cursor-pointer hover:-translate-y-[0.08rem] transition-all ease-in-out;
+  }
+
+  .clickable-outline {
+    @apply hover:cursor-pointer transition-all duration-75 ease-in-out border border-transparent hover:border hover:border-slate-900;
+  }
+}
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;

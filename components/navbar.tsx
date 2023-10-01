@@ -4,7 +4,11 @@ import useGoTo from "../hooks/useGoTo";
 import { useEffect, useRef, useState } from "react";
 import { SpotifyWebApi } from "spotify-web-api-ts";
 
-export default function Navbar() {
+interface Props {
+  isBlogPost?: boolean;
+}
+
+export default function Navbar({ isBlogPost }: Props) {
   const goTo = useGoTo();
 
   const spotifyRef = useRef<SpotifyWebApi | null>(null);
@@ -110,6 +114,7 @@ export default function Navbar() {
                 className={`${lastSong ? "" : "hidden"}`}
                 target="_blank"
                 href="https://open.spotify.com/user/mpek66?si=8e586285aca84768"
+                isBlogPost={isBlogPost}
               >
                 {lastSong?.timeString2 || ""}
               </SLink>
@@ -118,6 +123,7 @@ export default function Navbar() {
                 className={`${lastSong ? "" : "hidden"}`}
                 target="_blank"
                 href={lastSong?.trackUrl || ""}
+                isBlogPost={isBlogPost}
               >
                 {lastSong?.title || ""}
               </SLink>{" "}
@@ -126,6 +132,7 @@ export default function Navbar() {
                 className={`${lastSong ? "" : "hidden"}`}
                 target="_blank"
                 href={lastSong?.artistUrl || ""}
+                isBlogPost={isBlogPost}
               >
                 {lastSong?.artist || ""}
               </SLink>
@@ -137,21 +144,27 @@ export default function Navbar() {
         )}
       </div>
       <div className="hidden sm:flex flex-row">
-        <SLink className="text-lg mr-8" href="/">
+        <SLink className="text-lg mr-8" href="/" isBlogPost={isBlogPost}>
           About
         </SLink>
-        {false && (
-          <SLink className="text-lg mr-8" href="blog">
-            Blog
-          </SLink>
-        )}
-        <SLink className="text-lg mr-8" href="experience">
+        <SLink
+          className="text-lg mr-8"
+          href="/experience"
+          isBlogPost={isBlogPost}
+        >
           Experience
         </SLink>
-        <SLink className="text-lg mr-8" href="projects">
+        <SLink
+          className="text-lg mr-8"
+          href="/projects"
+          isBlogPost={isBlogPost}
+        >
           Projects
         </SLink>
-        <SLink className="text-lg mr-8" href="contact">
+        <SLink className="text-lg mr-8" href="/posts" isBlogPost={isBlogPost}>
+          Blog
+        </SLink>
+        <SLink className="text-lg mr-8" href="/contact" isBlogPost={isBlogPost}>
           Contact
         </SLink>
       </div>

@@ -39,12 +39,14 @@ export default function Post({ post }: { post: BlogPost | null }) {
       </style>
       {post && (
         <div className="flex px-8 pb-8 items-center justify-center">
-          <Image
-            src={"/blog_cartoons/" + post?.cartoon}
-            alt={post.slug}
-            width={500}
-            height={500}
-          />
+          <div className="w-[128px] h-[128px] overflow-hidden">
+            <Image
+              src={"/blog_cartoons/" + post?.cartoon}
+              alt={post.slug}
+              width={128}
+              height={128}
+            />
+          </div>
         </div>
       )}
       <article className="prose">{parse(post?.content || "")}</article>

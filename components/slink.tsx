@@ -5,6 +5,7 @@ interface CommonProps {
   children: string;
   className?: string;
   type?: "button" | "link";
+  isBlogPost?: boolean;
 }
 
 interface LinkProps {
@@ -30,7 +31,7 @@ export default function slink(props: Props) {
       className={`hover:underline ${
         props.className && props.className.indexOf("hover:text-") >= 0
           ? props.className
-          : props.className + " hover:text-lime-200"
+          : props.className + (props.isBlogPost ? "" : " hover:text-lime-200")
       } hover:-translate-y-[0.08rem] transition-all`}
       target={!props.type || props.type == "link" ? props.target : undefined}
     >
