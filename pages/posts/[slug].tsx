@@ -3,6 +3,7 @@ import { getBlogPostBySlug, getAllSlugs } from "../../blog/butils";
 import { BlogPost } from "../../types/types";
 import parse from "html-react-parser";
 import Image from "next/image";
+import Head from "next/head";
 
 interface StaticParams {
   params: {
@@ -30,6 +31,10 @@ export async function getStaticPaths() {
 export default function Post({ post }: { post: BlogPost | null }) {
   return (
     <div>
+      <Head>
+        <title>{post?.title}</title>
+        <meta name="description" content={post?.abstract} />
+      </Head>
       <style>
         {`
         body {

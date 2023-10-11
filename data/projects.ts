@@ -40,7 +40,7 @@ export const PROJECTS: Project[] = [
     image: "NumCross.png",
     timeframe: "February 2023 - May 2023",
     codeLink: "https://github.com/mpekala23/numcross",
-    liveLink: "https://numcross.com",
+    liveLink: "https://www.mark-pekala.dev/posts/numcross-down",
   },
   {
     title: "Verifying the Byzantine Generals Problem",

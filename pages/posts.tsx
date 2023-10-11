@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { getAllSlugs, getBlogPostBySlug } from "../blog/butils";
 import useGoTo from "../hooks/useGoTo";
 import { BlogPost } from "../types/types";
@@ -25,6 +26,10 @@ export default function Posts({ posts }: { posts: BlogPost[] }) {
 
   return (
     <div>
+      <Head>
+        <title>Mark&apos;s Thoughts</title>
+        <meta name="description" content="Most of these takes suck" />
+      </Head>
       {posts.map((post, ix) => {
         return (
           <div
@@ -39,7 +44,7 @@ export default function Posts({ posts }: { posts: BlogPost[] }) {
             </div>
             <div className="overflow-hidden w-[128px] h-[128px]">
               <Image
-                src={"/" + post.cartoon}
+                src={"/blog_cartoons/" + post.cartoon}
                 alt={post.title}
                 width={128}
                 height={128}
