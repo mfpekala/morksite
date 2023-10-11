@@ -1,6 +1,15 @@
 import { Project } from "../types/types";
 export const PROJECTS: Project[] = [
   {
+    title: "Odd Friends",
+    description: `I wanted to learn more about convex.dev's take on the data layer, so I built a simple 
+    clone of Wits and Wagers to play in the browser.`,
+    image: "OddFriends.png",
+    timeframe: "October 2023 - October 2023",
+    codeLink: "https://github.com/mpekala23/odd-friends",
+    liveLink: "https://odd-friends.mark-pekala.dev/",
+  },
+  {
     title: "Cyclicism",
     description: `As a kid, I loved reading the news. Nowadays, I find it rare to find an article
     that I don't feel like I've read some version of before. Cyclicism is a tool that uses transformer
