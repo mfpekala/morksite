@@ -98,10 +98,10 @@ export default function Navbar({ isBlogPost }: Props) {
           className="sm:hidden"
           buttons={[
             { text: "About / Home", onClick: goTo("/") },
-            // { text: "Blog", onClick: goTo("blog") },
-            { text: "Experience", onClick: goTo("experience") },
-            { text: "Projects", onClick: goTo("projects") },
-            { text: "Contact", onClick: goTo("contact") },
+            { text: "Experience", onClick: goTo("/experience") },
+            { text: "Projects", onClick: goTo("/projects") },
+            { text: "Blog", onClick: goTo("/posts") },
+            { text: "Contact", onClick: goTo("/contact") },
           ]}
         />
       </div>

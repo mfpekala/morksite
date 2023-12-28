@@ -30,29 +30,31 @@ export default function Posts({ posts }: { posts: BlogPost[] }) {
         <title>Mark&apos;s Thoughts</title>
         <meta name="description" content="Most of these takes suck" />
       </Head>
-      {posts.map((post, ix) => {
-        return (
-          <div
-            key={post.slug}
-            className="clickable-outline flex w-full justify-between"
-            onClick={goTo("posts/" + post.slug)}
-          >
-            <div>
-              <p className="font-bold text-2xl">{post.title}</p>
-              <p className="mt-1">{post.date}</p>
-              <p>{post.abstract}</p>
+      <div className="flex flex-col gap-8">
+        {posts.map((post, ix) => {
+          return (
+            <div
+              key={post.slug}
+              className="clickable-outline flex w-full justify-between"
+              onClick={goTo("/posts/" + post.slug)}
+            >
+              <div>
+                <p className="font-bold text-2xl">{post.title}</p>
+                <p className="mt-1">{post.date}</p>
+                <p>{post.abstract}</p>
+              </div>
+              <div className="overflow-hidden w-[128px] h-[128px]">
+                <Image
+                  src={"/blog_cartoons/" + post.cartoon}
+                  alt={post.title}
+                  width={128}
+                  height={128}
+                />
+              </div>
             </div>
-            <div className="overflow-hidden w-[128px] h-[128px]">
-              <Image
-                src={"/blog_cartoons/" + post.cartoon}
-                alt={post.title}
-                width={128}
-                height={128}
-              />
-            </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 }

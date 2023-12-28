@@ -4,6 +4,7 @@ import { BlogPost } from "../../types/types";
 import parse from "html-react-parser";
 import Image from "next/image";
 import Head from "next/head";
+import { useEffect, useState } from "react";
 
 interface StaticParams {
   params: {
@@ -29,6 +30,14 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ post }: { post: BlogPost | null }) {
+  const [prose, setProse] = useState<string | JSX.Element | JSX.Element[]>("");
+
+  useEffect(() => {
+    if (post) {
+      setProse(parse(post.content));
+    }
+  }, [post]);
+
   return (
     <div>
       <Head>
@@ -54,7 +63,7 @@ export default function Post({ post }: { post: BlogPost | null }) {
           </div>
         </div>
       )}
-      <article className="prose">{parse(post?.content || "")}</article>
+      <article className="prose">{prose}</article>
     </div>
   );
 }
