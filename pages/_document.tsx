@@ -12,11 +12,11 @@ export default function Document() {
           rel="stylesheet"
         />
       </Head>
+      <GoogleAnalytics gaId="G-FM0RFW2SYK" />
       <body className="dark text-slate-100 overscroll-contain">
         <Main />
         <NextScript />
       </body>
-      <GoogleAnalytics gaId="G-FM0RFW2SYK" />
     </Html>
   );
 }
