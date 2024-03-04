@@ -83,7 +83,8 @@ export default function App({ Component, pageProps }: AppProps) {
         className={`fixed top-0 left-0 z-0 w-screen h-screen ${isBlogPost ? "opacity-0" : ""
           }`}
       />
-      <Analytics />
+      <GoogleAnalytics gaId="G-FM0RFW2SYK" />
+      {/* <Analytics /> */}
     </div>
   );
 }
