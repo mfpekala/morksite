@@ -34,6 +34,22 @@ export default function Navbar({ isBlogPost }: Props) {
             "Content-Type": "application/x-www-form-urlencoded",
           },
         });
+
+        /// A NOTE TO ANYONE READING THIS:
+        /// Yes I'm just putting this secret in plaintext and yes that's bad
+        /// BUT this is a hobby fun site and I trust that Spotify devs have 
+        /// fenced it so all you can do with this secret is read what songs I've
+        /// listened to, so not that worried
+
+        // const refreshToken = "AQAmxAJD3vfNcfYnDuu4rKlyHueABb7y653uIHZ3WOzxaljePKdURm8ZnI-hkUo_rfpX7aNFfF665eHKM-CI4qnZdOa067JevR5PyCwa06o5di3QXl5EWlZQjlDV2l4EPUw";
+        // const res = await fetch("https://accounts.spotify.com/api/token", {
+        //   method: "POST",
+        //   body: `refresh_token=${refreshToken}&grant_type=refresh_token&client_id=8f81405b8d764a89849403cf4f30c625&client_secret=155e00d113994cdcb75ff18b7d993213`,
+        //   headers: {
+        //     "Content-Type": "application/x-www-form-urlencoded",
+        //   },
+        // });
+
         const clean = await res.json();
 
         spotifyRef.current = new SpotifyWebApi({
