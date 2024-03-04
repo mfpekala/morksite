@@ -6,6 +6,7 @@ import * as THREE from "three";
 import NET from "../components/vanta.min.net";
 import { usePathname } from "next/navigation";
 import { Analytics } from "@vercel/analytics/react";
+import { GoogleAnalytics } from '@next/third-parties/google'
 import Typewriter from "typewriter-effect";
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -73,16 +74,14 @@ export default function App({ Component, pageProps }: AppProps) {
         </Layout>
       </div>
       <div
-        className={`bg-[rgba(0.1,0.1,0.1,0.3)] fixed top-0 left-0 z-10 w-screen h-screen ${
-          isBlogPost ? "hidden" : ""
-        }`}
+        className={`bg-[rgba(0.1,0.1,0.1,0.3)] fixed top-0 left-0 z-10 w-screen h-screen ${isBlogPost ? "hidden" : ""
+          }`}
       />
       <div
         ref={vantaRef}
         id="test"
-        className={`fixed top-0 left-0 z-0 w-screen h-screen ${
-          isBlogPost ? "opacity-0" : ""
-        }`}
+        className={`fixed top-0 left-0 z-0 w-screen h-screen ${isBlogPost ? "opacity-0" : ""
+          }`}
       />
       <Analytics />
     </div>
