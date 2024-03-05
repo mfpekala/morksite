@@ -48,7 +48,7 @@ export async function getBlogPostBySlug(
 export async function getAllSlugs(): Promise<{ slug: string }[]> {
   const db = new Database("blog/meta.db");
   const rows = await new Promise<{ slug: string }[]>((resolve, reject) => {
-    db.all("SELECT slug FROM posts", (err, rows) => {
+    db.all("SELECT slug FROM posts ORDER BY seqnum DESC", (err, rows) => {
       if (err) {
         reject(err);
       } else {
