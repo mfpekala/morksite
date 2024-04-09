@@ -1,6 +1,6 @@
 # Zenith Devlog #1: 4/9/24
 
-I've noodled around on a lot of games. Some in more established engines (Unity, Unreal), others from scratch (C++). Recently, I've been playing around with Bevy, an insanely powerful but light-weight engine that feels like scratch but gets rid of a lot of the annoying stuff. Also, it's in rust, which is (imo) a joy to program in.
+I've noodled around making a lot of games. Some using established engines like Unity and Unreal, others from scratch using C/C++. Lately, I've been diving into Bevy, an incredibly potent yet lightweight engine. It feels like starting from scratch but without a lot of the annoying stuff. Plus, it's in Rust, which (imo) is fun to use.
 
 Most of the time, I get really into these games for a few weeks, but then completely drop them. Either the gameplay doesn't feel good, or I'm not passionate about the story, or I'm simply afraid of how much work it'll be.
 
@@ -14,9 +14,9 @@ So, I've decided to start a devlog. In this post, I hope to explain _why_ I'm do
 
 Plainly speaking: I want to finish this game, I want it to be good, and I want to be polished. I think getting fragments of the game and my mind out in to the public as early as possible will be motivating and make the final product as high quality as possible.
 
-I've also spent a lot of time working with Bevy, and want to get more involved in the community. I'm hoping that by putting my thoughts, struggles, and solutions out in the open I can engage with the community, providing and receiving valuable advice.
+This devlog is a good chance for me to get more involved in the community. I'm hoping that by putting my thoughts, struggles, and solutions out in the open I can engage with the community, providing and receiving valuable advice.
 
-Also, forcing myself to sit down and write at a high-level about the project every week will make it easier to stay on track, and continue to work on the highest priority tasks (not just whatever seems fun in the moment).
+There's also the very real point that by forcing myself to sit down and write at a high-level about the project every week, I'll be more likely to finish it and perhaps more willing to do the "high priority annoying stuff" as opposed to just "whatever feels fun today" (although usually they're not too far off).
 
 ## Who cares?
 

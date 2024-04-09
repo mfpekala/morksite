@@ -39,7 +39,7 @@ export default function Post({ post }: { post: BlogPost | null }) {
   }, [post]);
 
   return (
-    <div>
+    <div className="w-full sm:pr-16">
       <Head>
         <title>{post?.title}</title>
         <meta name="description" content={post?.abstract} />
