@@ -1,6 +1,23 @@
 import { Project } from "../types/types";
 export const PROJECTS: Project[] = [
   {
+    title: "Starling",
+    description: `Made a kind-of complete game in rust using Bevy for their 5th game jam.`,
+    image: "Starling.gif",
+    timeframe: "July 2024 - July 2024",
+    codeLink: "https://github.com/mfpekala/starling",
+    liveLink: "https://mfpekala.itch.io/starling",
+  },
+  {
+    title: "Nino Video",
+    description: `With some friends, we tried to put the entire WebRTC stack on an FPGA. It kind of worked.`,
+    image: "Nino.png",
+    timeframe: "December 2023 - May 2024",
+    codeLink: "",
+    protectString:
+      "Unfortunately we can't release this to the public... and the demo is down...",
+  },
+  {
     title: "Odd Friends",
     description: `I wanted to learn more about convex.dev's take on the data layer, so I built a simple 
     clone of Wits and Wagers to play in the browser.`,

@@ -106,8 +106,8 @@ export default function Navbar({ isBlogPost }: Props) {
   return (
     <div className="w-full my-8">
       <div className="flex">
-        <h1 className="text-4xl mb-2 cursor-pointer" onClick={goTo("/")}>
-          Mark.md
+        <h1 className={`text-4xl mb-2 ${isBlogPost ? "cursor-pointer" : ""}`} onClick={isBlogPost ? undefined : goTo("/")}>
+          {isBlogPost ? "Some(thoughts)" : "Mark.md"}
         </h1>
         <div className="flex-1" />
         <Dropdown
@@ -117,7 +117,7 @@ export default function Navbar({ isBlogPost }: Props) {
             { text: "Experience", onClick: goTo("/experience") },
             { text: "Projects", onClick: goTo("/projects") },
             { text: "Blog", onClick: goTo("/posts") },
-            { text: "Contact", onClick: goTo("/contact") },
+            // { text: "Contact", onClick: goTo("/contact") },
           ]}
         />
       </div>
@@ -180,9 +180,9 @@ export default function Navbar({ isBlogPost }: Props) {
         <SLink className="text-lg mr-8" href="/posts" isBlogPost={isBlogPost}>
           Blog
         </SLink>
-        <SLink className="text-lg mr-8" href="/contact" isBlogPost={isBlogPost}>
+        {/* <SLink className="text-lg mr-8" href="/contact" isBlogPost={isBlogPost}>
           Contact
-        </SLink>
+        </SLink> */}
       </div>
     </div>
   );

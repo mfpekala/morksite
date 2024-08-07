@@ -3,6 +3,48 @@ import { Experience } from "../types/types";
 export const Experiences: Experience[] = [
   {
     first: true,
+    year: "2024",
+    org: "Sigma Computing",
+    logo: "Sigma.png",
+    website: "https://www.sigmacomputing.com/",
+    title: "Software Engineer - Caching",
+    timeframe: "August 2024 - Present",
+    location: "San Francisco, CA",
+    description: `I am a software engineering on a caching team helping make queries go brrr. I haven't been here long, so not much to put on my resume...`,
+    bullets: [],
+  },
+  {
+    year: "2024",
+    org: "Kino",
+    logo: "Kino.png",
+    website: "https://trykino.com",
+    title: "Software Engineering Intern",
+    timeframe: "January 2024 - July 2024",
+    location: "NYC / SF",
+    description: `Kino aims to empower filmmakers with the ability to semantically search their footage.
+    I helped build out a lot features for the app and improve internal plumbing. Here's what's on my resume:`,
+    bullets: [
+      "Added the ability to search for text in frames from start to finish.",
+      "Developed the first version of facial recognition for the app.",
+      "Added a comprehensive LLM integration, offering seamless plugins for big vendors over an API as well as tiny models running locally (Qwen).",
+    ],
+  },
+  {
+    year: "2023",
+    org: "Harvard CS Department",
+    logo: "SEASLogo.webp",
+    website: "https://github.com/Harvard-CS-1200/cs1200",
+    title: "Course Assistant - Algorithms and their Limitations",
+    timeframe: "September 2023 - December 2023",
+    location: "Cambridge, MA",
+    description: `Helped run the intermediate algorithms class at Harvard. Here's what's on my resume:`,
+    bullets: [
+      "Answered Ed forum posts at crazy hours.",
+      "Graded exams and homework.",
+      "Held office hours for 2-3 hours per week to answer student questions.",
+    ],
+  },
+  {
     year: "2023",
     org: "Nutanix",
     logo: "Nutanix.png",
@@ -26,10 +68,10 @@ export const Experiences: Experience[] = [
     logo: "Kino.png",
     website: "https://trykino.com",
     title: "Software Engineering Intern",
-    timeframe: "May 2023 - Present",
+    timeframe: "May 2023 - August 2023",
     location: "San Francisco, CA",
     description: `Kino aims to empower filmmakers with the ability to semantically search their footage.
-    I'm helping (part-time) build out OCR functionality. Here's what's on my resume:`,
+    I helped (part-time) build out OCR functionality. Here's what's on my resume:`,
     bullets: [
       "Benchmarked various open-source OCR engines to determine the best fit for our use case.",
       "Developed a pipeline to extract text from user videos and index them for lightning-fast rust-powered search.",
@@ -46,7 +88,7 @@ export const Experiences: Experience[] = [
     location: "Madison, WI (Remote)",
     description: `The Fair Opportunity project is a small non-profit 
     committed to making college accessible to all. As one of the first 
-    engineering hires, I work to automate internal systems to expand 
+    engineering hires, I worked to automate internal systems to expand 
     our reach and improve the quality of the free resource portals we provide 
     to our students and mentors. Here's what's on my resume:`,
     bullets: [
@@ -101,7 +143,7 @@ export const Experiences: Experience[] = [
     location: "New Haven, CT (Remote)",
     description: `Ameelio works to develop innovative technologies 
     to disrupt the bloated and discriminatory corrections industry. 
-    As a founding engineer at Ameelio, I took ownership of mobile 
+    As an early engineer at Ameelio, I took ownership of mobile 
     engineering, while also helping the small team with design, full-stack 
     work, and devops. Here's what's on my resume:`,
     bullets: [

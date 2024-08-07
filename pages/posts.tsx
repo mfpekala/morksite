@@ -27,7 +27,7 @@ export default function Posts({ posts }: { posts: BlogPost[] }) {
   return (
     <div>
       <Head>
-        <title>Mark&apos;s Thoughts</title>
+        <title>Some(thoughts)</title>
         <meta name="description" content="Most of these takes suck" />
       </Head>
       <div className="flex flex-col gap-8">

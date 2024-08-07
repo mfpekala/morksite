@@ -4,8 +4,8 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="MarkIcon.png" />
+        <link rel="icon" href="/mountain.ico" />
+        <link rel="apple-touch-icon" href="flysingle.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=VT323&display=optional"
           rel="stylesheet"
