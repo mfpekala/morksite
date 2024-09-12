@@ -66,7 +66,7 @@ This is especially helpful in the early stages of a game, where coming up with t
 
 ## Balance is Hard (Probably O(2^n) hard naively)
 
-What I mean is that by having n features that might make the game "harder" balancing the game feels like turning n switches either on or off and seeing how hard it feels. Predicting how hard something will be just by looking at the switches feels impossible. Except maybe it's a little worse because the switches are probably actually knobs that are arbitrary floats, but maybe that's easier because you can just put everything around 0.5 times the maximum sane value and hope it's okay? Morale of the story is that balance is hard, and sneaks up on you fast if your not careful.
+What I mean is that by having n features that might make the game "harder" balancing the game feels like turning n switches either on or off and seeing how hard it feels. Predicting how hard something will be just by looking at the switches feels impossible. Except maybe it's a little worse because the switches are probably actually knobs that are arbitrary floats, but maybe that's easier because you can just put everything around 0.5 times the maximum sane value and hope it's okay? Moral of the story is that balance is hard, and sneaks up on you fast if your not careful.
 
 For example, take Starling. It's a super simple game. Only two enemy types and one kind of platform to interact with. But there's probably around 60 floats that contribute pretty directly to how hard the game feels. To name a few:
 

@@ -47,7 +47,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <div>
-      {!isBlogPost && (
+      {/* {!isBlogPost && (
         <div
           className={`transition-opacity ease-in duration-700 opacity-${typewriterOpacity} pointer-events-none fixed top-0 w-full h-full bg-slate-50 z-30 flex justify-center items-center`}
         >
@@ -67,7 +67,7 @@ export default function App({ Component, pageProps }: AppProps) {
             />
           </div>
         </div>
-      )}
+      )} */}
       <div className="relative overscroll-contain z-20">
         <Layout isBlogPost={isBlogPost}>
           <Component {...pageProps} />
