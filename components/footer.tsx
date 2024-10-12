@@ -17,7 +17,7 @@ export default function footer() {
         />
         <SocialIcon
           className="ml-0.5 scale-[0.75]"
-          url="https://www.linkedin.com/in/mark-pekala/"
+          url="https://www.linkedin.com/in/cargo-run/"
           bgColor="#F1F5F9"
           fgColor="#0F172A"
         />
